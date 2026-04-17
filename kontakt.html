@@ -106,8 +106,29 @@
     </div>
   </section>
 
-  <!-- Jak do nas trafic -->
+  <!-- Formularz kontaktowy -->
   <section class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Napisz do nas</h2>
+      <div class="contact-form-wrapper">
+        <!-- NOTE: Replace 'xwpbpjvq' with your own Formspree form ID from https://formspree.io -->
+        <form action="https://formspree.io/f/xwpbpjvq" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="email">Twój email</label>
+            <input type="email" id="email" name="email" required placeholder="nazwa@przykład.pl">
+          </div>
+          <div class="form-group">
+            <label for="message">Wiadomość</label>
+            <textarea id="message" name="message" required placeholder="Napisz do nas..." rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Wyślij wiadomość</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jak do nas trafic -->
+  <section class="section">
     <div class="container">
       <h2 class="section__title">Jak do nas dotrzeć?</h2>
       <div style="max-width: 800px; margin: 0 auto;">
