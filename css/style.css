@@ -874,3 +874,48 @@ p {
 .mb-4 { margin-bottom: 2rem; }
 .mt-2 { margin-top: 1rem; }
 .mt-4 { margin-top: 2rem; }
+
+/* === Pricing Tables === */
+.pricing-table {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.price-list {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.price-list th,
+.price-list td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+.price-list th {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+.price-list th:last-child,
+.price-list td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.price-list tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.price-list tbody tr:last-child {
+  border-bottom: none;
+}
+
+.price-list tbody tr:hover {
+  background: #f8f9fa;
+}
