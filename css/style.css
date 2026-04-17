@@ -919,3 +919,60 @@ p {
 .price-list tbody tr:hover {
   background: #f8f9fa;
 }
+
+/* SOM Page Styles */
+.som-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.som-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-left: 4px solid var(--primary);
+  border-radius: 0 8px 8px 0;
+}
+
+.som-content h2 {
+  color: var(--primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.som-content ul,
+.som-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.som-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.som-standards {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.som-standard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.som-standard h3 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.som-standard ul {
+  margin-top: 0.75rem;
+}
