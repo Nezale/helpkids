@@ -133,9 +133,16 @@ p {
 }
 
 .logo__img {
-  height: 50px;
+  height: 70px;
   width: auto;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+  transition: var(--transition);
+}
+
+.logo__img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.5);
 }
 
 .logo__text {
@@ -229,6 +236,23 @@ p {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, rgba(74, 144, 226, 0.85) 0%, rgba(102, 217, 184, 0.7) 100%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 280px;
+  height: 280px;
+  background-image: url('../assets/logo/HELPKIDS.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  border-radius: 50%;
 }
 
 .hero__content {
@@ -709,6 +733,24 @@ p {
   padding: 4rem 0 2rem;
 }
 
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.footer__logo-img {
+  height: 80px;
+  width: auto;
+  border-radius: 10px;
+  opacity: 0.95;
+  transition: var(--transition);
+}
+
+.footer__logo-img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -812,6 +854,16 @@ p {
     font-size: 2rem;
   }
 
+  .hero::after {
+    width: 200px;
+    height: 200px;
+    right: 2%;
+  }
+
+  .logo__img {
+    height: 60px;
+  }
+
   .section {
     padding: 3rem 0;
   }
@@ -912,6 +964,16 @@ p {
 
   .footer__social {
     justify-content: center;
+  }
+
+  .hero::after {
+    width: 150px;
+    height: 150px;
+    opacity: 0.1;
+  }
+
+  .logo__img {
+    height: 55px;
   }
 }
 
