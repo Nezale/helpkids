@@ -171,7 +171,6 @@
                 <li>Trudnosci w funkcjonowaniu społecznym</li>
                 <li>Trudna sytuacja życiowa (rozwod, śmierć bliskiej osoby, trauma)</li>
               </ul>
-              <span class="service-item__price">400 zł (2 spotkania po 60 min)</span>
             </div>
           </details>
 
@@ -315,11 +314,21 @@
   <!-- CTA -->
   <section class="section">
     <div class="container text-center">
-      <h2 class="section__title">Potrzebujesz pomocy w wyborze?</h2>
+      <h2 class="section__title">Potrzebujesz pomocy w <span id="hidden-trigger" style="cursor: default;">wyborze</span>?</h2>
       <p style="max-width: 600px; margin: 0 auto 2rem;">Nie wiesz, która usługa będzie najlepsza dla Twojego dziecka? Skontaktuj się z nami - pomożemy dobrać odpowiednią formę wsparcia.</p>
       <a href="kontakt.html" class="btn btn--primary">Skontaktuj sie</a>
     </div>
   </section>
+
+  <!-- Modal wynajmu sali -->
+  <div id="rental-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:white; border-radius:12px; padding:2rem; max-width:400px; width:90%; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+      <h3 style="font-family:'Quicksand',sans-serif; margin-bottom:1rem; color:#2D3748;">Wynajem Sali</h3>
+      <p style="color:#4A5568; margin-bottom:1.5rem;">Oferujemy możliwość wynajęcia sali. W celu rezerwacji prosimy o kontakt telefoniczny.</p>
+      <a href="tel:+48531866177" style="display:inline-block; background:#4A90E2; color:white; padding:0.75rem 1.5rem; border-radius:8px; text-decoration:none; font-weight:600;">&#128222; 531 866 177</a>
+      <p id="rental-modal-close" style="margin-top:1rem; color:#999; cursor:pointer; font-size:0.9rem;">Zamknij</p>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -365,5 +374,33 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('.service-item').forEach(function(item) {
+      item.addEventListener('toggle', function() {
+        if (this.open) {
+          document.querySelectorAll('.service-item').forEach(function(other) {
+            if (other !== item) other.removeAttribute('open');
+          });
+        }
+      });
+    });
+
+    var trigger = document.getElementById('hidden-trigger');
+    var modal = document.getElementById('rental-modal');
+    var closeBtn = document.getElementById('rental-modal-close');
+
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
